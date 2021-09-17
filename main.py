@@ -17,6 +17,9 @@ def kapinasana(numurs1, numurs2):
 
 def modulis(numurs1, numurs2):
     return numurs1 % numurs2
+
+def dalisana_bez_komatiem(numurs1, numurs2):
+    return numurs1 // numurs2
   
 print("Lūdzu izvēlaties opciju -\n" \
         "1. Saskaitīt\n" \
@@ -24,9 +27,10 @@ print("Lūdzu izvēlaties opciju -\n" \
         "3. Sareizināt\n" \
         "4. Izdalīt\n" \
         "5. Kāpināt\n" \
-        "6. Modulis\n" )
+        "6. Modulis\n" \
+        "7. Dalisana bez komatiem\n" )
  
-select = int(input("Izvēlies opciju - 1, 2, 3, 4, 5, 6 :"))
+select = int(input("Izvēlies opciju - 1, 2, 3, 4, 5, 6, 7 :"))
   
 pirmais_skaitlis = int(input("Ievadiet pirmo skaitli: "))
 otrais_skaitlis = int(input("Ievadiet otro skaitli: "))
@@ -52,5 +56,8 @@ elif select == 5:
 elif select == 6:
     print(pirmais_skaitlis, "%", otrais_skaitlis, "=",
                    modulis(pirmais_skaitlis, otrais_skaitlis))
+elif select == 7:
+    print(pirmais_skaitlis, "//", otrais_skaitlis, "=",
+                   dalisana_bez_komatiem(pirmais_skaitlis, otrais_skaitlis))
 else:
     print("Nepareiza ievade")
