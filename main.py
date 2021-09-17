@@ -14,15 +14,19 @@ def dalisana(numurs1, numurs2):
 
 def kapinasana(numurs1, numurs2):
     return numurs1 ** numurs2
+
+def modulis(numurs1, numurs2):
+    return numurs1 % numurs2
   
 print("Lūdzu izvēlaties opciju -\n" \
         "1. Saskaitīt\n" \
         "2. Atņemt\n" \
         "3. Sareizināt\n" \
         "4. Izdalīt\n" \
-        "5. Kāpināt\n" )
+        "5. Kāpināt\n" \
+        "6. Modulis\n" )
  
-select = int(input("Izvēlies opciju - 1, 2, 3, 4, 5 :"))
+select = int(input("Izvēlies opciju - 1, 2, 3, 4, 5, 6 :"))
   
 pirmais_skaitlis = int(input("Ievadiet pirmo skaitli: "))
 otrais_skaitlis = int(input("Ievadiet otro skaitli: "))
@@ -45,5 +49,8 @@ elif select == 4:
 elif select == 5:
     print(pirmais_skaitlis, "**", otrais_skaitlis, "=",
                    kapinasana(pirmais_skaitlis, otrais_skaitlis))
+elif select == 6:
+    print(pirmais_skaitlis, "%", otrais_skaitlis, "=",
+                   modulis(pirmais_skaitlis, otrais_skaitlis))
 else:
     print("Nepareiza ievade")
